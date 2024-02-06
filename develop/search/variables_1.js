@@ -10,7 +10,7 @@ var searchData=
   ['blk_7',['blk',['../structdd__t.html#a3942eac5bb22294fbdc0bdbea6ad56de',1,'dd_t::blk'],['../hproto__fortran_8h.html#a281172b4149a354a72a20750b52b985b',1,'blk:&#160;hproto_fortran.h']]],
   ['block_5flen_8',['block_len',['../structsp__info__block__t.html#afa914a512ef360b85a0e4c2430c33188',1,'sp_info_block_t']]],
   ['block_5foffset_9',['block_offset',['../structbitrec__t.html#a772f28b92f9b39dce2da9dde7ff3e928',1,'bitrec_t']]],
-  ['block_5fsize_10',['block_size',['../structaccrec__t.html#a25ef581f647f427bb81afd0a548d7794',1,'accrec_t::block_size'],['../hproto__fortran_8h.html#a123d8ccc888cd7bdb453b1c0976aa7bf',1,'block_size:&#160;hproto_fortran.h']]],
+  ['block_5fsize_10',['block_size',['../structaccrec__t.html#a25ef581f647f427bb81afd0a548d7794',1,'accrec_t::block_size'],['../struct_n_c__var.html#a25ef581f647f427bb81afd0a548d7794',1,'NC_var::block_size'],['../hproto__fortran_8h.html#a123d8ccc888cd7bdb453b1c0976aa7bf',1,'block_size:&#160;hproto_fortran.h']]],
   ['bptr_11',['bptr',['../struct_d_y_n___v_w_r_i_t_e_l_i_s_t.html#a8e381f27bb123766a1a9e8967eeb4be5',1,'DYN_VWRITELIST']]],
   ['brief_5fdata_5fcmnts_12',['brief_data_cmnts',['../structfspec.html#a09b561cc06b0a2eac829cb4de850de21',1,'fspec']]],
   ['buf_13',['buf',['../hproto__fortran_8h.html#a95033edc77d9068e4ee5651ffcddc905',1,'hproto_fortran.h']]],

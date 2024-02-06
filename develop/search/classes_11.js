@@ -9,8 +9,9 @@ var searchData=
   ['vg_5finfo_5ft_6',['vg_info_t',['../structvg__info__t.html',1,'']]],
   ['vginstance_5ft_7',['vginstance_t',['../structvginstance__t.html',1,'']]],
   ['vgroup_5fdesc_8',['vgroup_desc',['../structvgroup__desc.html',1,'']]],
-  ['vnode_9',['vnode',['../structvnode.html',1,'']]],
-  ['vs_5fattr_5ft_10',['vs_attr_t',['../structvs__attr__t.html',1,'']]],
-  ['vsinstance_5ft_11',['vsinstance_t',['../structvsinstance__t.html',1,'']]],
-  ['vwritelist_12',['VWRITELIST',['../struct_v_w_r_i_t_e_l_i_s_t.html',1,'']]]
+  ['vix_5ft_9',['vix_t',['../structvix__t.html',1,'']]],
+  ['vnode_10',['vnode',['../structvnode.html',1,'']]],
+  ['vs_5fattr_5ft_11',['vs_attr_t',['../structvs__attr__t.html',1,'']]],
+  ['vsinstance_5ft_12',['vsinstance_t',['../structvsinstance__t.html',1,'']]],
+  ['vwritelist_13',['VWRITELIST',['../struct_v_w_r_i_t_e_l_i_s_t.html',1,'']]]
 ];

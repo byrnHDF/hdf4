@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="HDFG-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.hdfgroup.org">HDF</a>
-   &#160;<span id="projectnumber">4.2.17-8a696a2</span>
+   &#160;<span id="projectnumber">4.3.0-a191aa6</span>
    </div>
    <div id="projectbrief">API Reference</div>
   </td>
@@ -118,9 +118,15 @@ $(function(){initNavTree('local__nc_8h.html',''); initResizable(); });
 <code>#include &lt;rpc/types.h&gt;</code><br />
 <code>#include &lt;rpc/xdr.h&gt;</code><br />
 <code>#include &quot;hdf4_netcdf.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="hdf_8h.html">hdf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="vg_8h.html">vg.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hfile_8h.html">hfile.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mfhdfi_8h.html">mfhdfi.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvix__t.html">vix_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_n_c__array.html">NC_array</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_n_c__string.html">NC_string</a></td></tr>
@@ -156,8 +162,30 @@ Macros</h2></td></tr>
 <tr class="separator:a18bdbdc3033352ba10f6f46aea78306b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8e85294f3b3a58270e6214d4e28ef90" id="r_ac8e85294f3b3a58270e6214d4e28ef90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8e85294f3b3a58270e6214d4e28ef90">Void</a>&#160;&#160;&#160;char</td></tr>
 <tr class="separator:ac8e85294f3b3a58270e6214d4e28ef90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868be2e049f7de83563898de52729dbf" id="r_a868be2e049f7de83563898de52729dbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a868be2e049f7de83563898de52729dbf">ATTR_TAG</a>&#160;&#160;&#160;<a class="el" href="htags_8h.html#a4016ad72f5269a8867e20f229ec7082f">DFTAG_VH</a></td></tr>
+<tr class="separator:a868be2e049f7de83563898de52729dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450fdd1303a94cf5df506f44df8e9286" id="r_a450fdd1303a94cf5df506f44df8e9286"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a450fdd1303a94cf5df506f44df8e9286">DIM_TAG</a>&#160;&#160;&#160;<a class="el" href="htags_8h.html#a05aa3227bc4993e88b71b83176d9c93d">DFTAG_VG</a></td></tr>
+<tr class="separator:a450fdd1303a94cf5df506f44df8e9286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b32f2d5a97f3c2519bf6ec4b913668" id="r_ab4b32f2d5a97f3c2519bf6ec4b913668"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4b32f2d5a97f3c2519bf6ec4b913668">VAR_TAG</a>&#160;&#160;&#160;<a class="el" href="htags_8h.html#a05aa3227bc4993e88b71b83176d9c93d">DFTAG_VG</a></td></tr>
+<tr class="separator:ab4b32f2d5a97f3c2519bf6ec4b913668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25dc0c17d18ea4c67725c7aebb4b8393" id="r_a25dc0c17d18ea4c67725c7aebb4b8393"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25dc0c17d18ea4c67725c7aebb4b8393">DATA_TAG</a>&#160;&#160;&#160;<a class="el" href="htags_8h.html#aa233a4870d44174c0786b059edc2a1c1">DFTAG_SD</a></td></tr>
+<tr class="separator:a25dc0c17d18ea4c67725c7aebb4b8393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c58c89fb46a46a5359c3c3d1a7c0106" id="r_a6c58c89fb46a46a5359c3c3d1a7c0106"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c58c89fb46a46a5359c3c3d1a7c0106">BOGUS_TAG</a>&#160;&#160;&#160;((<a class="el" href="hdfi_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>)721)</td></tr>
+<tr class="separator:a6c58c89fb46a46a5359c3c3d1a7c0106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21154d2e26d96e16f0788a32cb8581a5" id="r_a21154d2e26d96e16f0788a32cb8581a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21154d2e26d96e16f0788a32cb8581a5">DIMVAL_VERSION00</a>&#160;&#160;&#160;0     /* &lt;<a class="el" href="hproto__fortran_8h.html#a52c295cb9c7b39aab45b2c17e5c5516d">dimsize</a>&gt; fake <a class="el" href="hproto__fortran_8h.html#aa213837add851f30918771e166dc194a">values</a> */</td></tr>
+<tr class="separator:a21154d2e26d96e16f0788a32cb8581a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00fa0df91903a4adc899bd33fcec7c98" id="r_a00fa0df91903a4adc899bd33fcec7c98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00fa0df91903a4adc899bd33fcec7c98">DIMVAL_VERSION01</a>&#160;&#160;&#160;1     /* 1 elt with value of &lt;<a class="el" href="hproto__fortran_8h.html#a52c295cb9c7b39aab45b2c17e5c5516d">dimsize</a>&gt;  */</td></tr>
+<tr class="separator:a00fa0df91903a4adc899bd33fcec7c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3fab59482bedfb1cc6ac277f67f30bf" id="r_ac3fab59482bedfb1cc6ac277f67f30bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3fab59482bedfb1cc6ac277f67f30bf">BLOCK_MULT</a>&#160;&#160;&#160;64    /* multiplier for bytes in linked blocks */</td></tr>
+<tr class="separator:ac3fab59482bedfb1cc6ac277f67f30bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8bad2cd89820cdaf2a7f26392774014" id="r_aa8bad2cd89820cdaf2a7f26392774014"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8bad2cd89820cdaf2a7f26392774014">MAX_BLOCK_SIZE</a>&#160;&#160;&#160;65536 /* maximum <a class="el" href="hproto__fortran_8h.html#a0063d28fb02fdef07a24ae30b790cf57">size</a> of block in linked blocks */</td></tr>
+<tr class="separator:aa8bad2cd89820cdaf2a7f26392774014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b7771bbb0e029e9200b3a7ec9816204" id="r_a8b7771bbb0e029e9200b3a7ec9816204"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b7771bbb0e029e9200b3a7ec9816204">BLOCK_COUNT</a>&#160;&#160;&#160;128   /* <a class="el" href="hproto__fortran_8h.html#a0063d28fb02fdef07a24ae30b790cf57">size</a> of linked block pointer objects  */</td></tr>
+<tr class="separator:a8b7771bbb0e029e9200b3a7ec9816204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34e253e64f5ae4da5f81b1fe1f0925cf" id="r_a34e253e64f5ae4da5f81b1fe1f0925cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34e253e64f5ae4da5f81b1fe1f0925cf">MAX_VXR_ENTRIES</a>&#160;&#160;&#160;10</td></tr>
 <tr class="separator:a34e253e64f5ae4da5f81b1fe1f0925cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae623d071cbe5f3f0158ca810cb1569ec" id="r_ae623d071cbe5f3f0158ca810cb1569ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae623d071cbe5f3f0158ca810cb1569ec">NC_compare_string</a>(s1,  s2)&#160;&#160;&#160;((s1)-&gt;hash != (s2)-&gt;hash ? 1 : strcmp((s1)-&gt;<a class="el" href="hproto__fortran_8h.html#aa213837add851f30918771e166dc194a">values</a>, (s2)-&gt;<a class="el" href="hproto__fortran_8h.html#aa213837add851f30918771e166dc194a">values</a>))</td></tr>
+<tr class="separator:ae623d071cbe5f3f0158ca810cb1569ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1e74ab59bacb2bbe19a6f8dbcfd3e2c" id="r_ac1e74ab59bacb2bbe19a6f8dbcfd3e2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1e74ab59bacb2bbe19a6f8dbcfd3e2c">IS_RECVAR</a>(vp)&#160;&#160;&#160;((vp)-&gt;shape != NULL ? (*(vp)-&gt;shape == NC_UNLIMITED) : 0)</td></tr>
 <tr class="separator:ac1e74ab59bacb2bbe19a6f8dbcfd3e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a621c3ce46061ad62071ad596676698f8" id="r_a621c3ce46061ad62071ad596676698f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a621c3ce46061ad62071ad596676698f8">netCDF_FILE</a>&#160;&#160;&#160;0</td></tr>
@@ -483,6 +511,82 @@ Functions</h2></td></tr>
 <tr class="separator:a88a6338fd5b71622b2f2fb170a07412f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad274ee5b63e8895778d0c24a2001c9d2" id="r_ad274ee5b63e8895778d0c24a2001c9d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> int <a class="el" href="hdf2netcdf_8h.html#a63f39b9a3e188f122ba2a08ebcb18798">HNAME</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad274ee5b63e8895778d0c24a2001c9d2">NCxdrfile_create</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *xdrs, const char *path, int ncmode)</td></tr>
 <tr class="separator:ad274ee5b63e8895778d0c24a2001c9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d48c51d7d2864722b7f2219b8d117c" id="r_a56d48c51d7d2864722b7f2219b8d117c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56d48c51d7d2864722b7f2219b8d117c">hdf_xdrfile_create</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *xdrs, int ncop)</td></tr>
+<tr class="separator:a56d48c51d7d2864722b7f2219b8d117c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f17c099366c82688cad8f78f8d4b65d" id="r_a7f17c099366c82688cad8f78f8d4b65d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f17c099366c82688cad8f78f8d4b65d">hdf_fill_array</a> (char *storage, <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> <a class="el" href="hproto__fortran_8h.html#ad1931bce779e19c2c65d465cdaddc445">len</a>, char *value, <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> <a class="el" href="hproto__fortran_8h.html#a67eb17a567a8fa132650fcee33ca50e9">type</a>)</td></tr>
+<tr class="separator:a7f17c099366c82688cad8f78f8d4b65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a0f3b040e86e23da9fd92be361107d" id="r_a51a0f3b040e86e23da9fd92be361107d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51a0f3b040e86e23da9fd92be361107d">hdf_get_data</a> (<a class="el" href="struct_n_c.html">NC</a> *handle, <a class="el" href="struct_n_c__var.html">NC_var</a> *vp)</td></tr>
+<tr class="separator:a51a0f3b040e86e23da9fd92be361107d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8b30a4725d975b6d308e5ad80ac900a" id="r_aa8b30a4725d975b6d308e5ad80ac900a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8b30a4725d975b6d308e5ad80ac900a">hdf_get_vp_aid</a> (<a class="el" href="struct_n_c.html">NC</a> *handle, <a class="el" href="struct_n_c__var.html">NC_var</a> *vp)</td></tr>
+<tr class="separator:aa8b30a4725d975b6d308e5ad80ac900a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ad042135ddfd9362d131d08a01fa7b" id="r_a74ad042135ddfd9362d131d08a01fa7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74ad042135ddfd9362d131d08a01fa7b">hdf_map_type</a> (nc_type)</td></tr>
+<tr class="separator:a74ad042135ddfd9362d131d08a01fa7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46cf377e1e577dd1a09da56b43b166f5" id="r_a46cf377e1e577dd1a09da56b43b166f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> nc_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46cf377e1e577dd1a09da56b43b166f5">hdf_unmap_type</a> (int)</td></tr>
+<tr class="separator:a46cf377e1e577dd1a09da56b43b166f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1ad44e13d7718c3bbd609aa602950d" id="r_a8b1ad44e13d7718c3bbd609aa602950d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b1ad44e13d7718c3bbd609aa602950d">hdf_get_ref</a> (<a class="el" href="struct_n_c.html">NC</a> *, int)</td></tr>
+<tr class="separator:a8b1ad44e13d7718c3bbd609aa602950d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6491e94f3f289bff7b67e2c276b7c33" id="r_ab6491e94f3f289bff7b67e2c276b7c33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6491e94f3f289bff7b67e2c276b7c33">hdf_create_dim_vdata</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> *, <a class="el" href="struct_n_c__dim.html">NC_dim</a> *)</td></tr>
+<tr class="separator:ab6491e94f3f289bff7b67e2c276b7c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7302fbbee52ccffe27b63f87184d4b7e" id="r_a7302fbbee52ccffe27b63f87184d4b7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7302fbbee52ccffe27b63f87184d4b7e">hdf_create_compat_dim_vdata</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *xdrs, <a class="el" href="struct_n_c.html">NC</a> *handle, <a class="el" href="struct_n_c__dim.html">NC_dim</a> *dim, <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> dimval_ver)</td></tr>
+<tr class="separator:a7302fbbee52ccffe27b63f87184d4b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70ed68d7ae6b5ee0aa8e118814691896" id="r_a70ed68d7ae6b5ee0aa8e118814691896"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70ed68d7ae6b5ee0aa8e118814691896">hdf_write_attr</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> *, <a class="el" href="struct_n_c__attr.html">NC_attr</a> **)</td></tr>
+<tr class="separator:a70ed68d7ae6b5ee0aa8e118814691896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe244e11c087d5b0f975bf893c32842" id="r_acbe244e11c087d5b0f975bf893c32842"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbe244e11c087d5b0f975bf893c32842">hdf_write_dim</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> *, <a class="el" href="struct_n_c__dim.html">NC_dim</a> **, <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a>)</td></tr>
+<tr class="separator:acbe244e11c087d5b0f975bf893c32842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a995630b6bfb876b486c6da87b45af19a" id="r_a995630b6bfb876b486c6da87b45af19a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a995630b6bfb876b486c6da87b45af19a">hdf_write_var</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> *, <a class="el" href="struct_n_c__var.html">NC_var</a> **)</td></tr>
+<tr class="separator:a995630b6bfb876b486c6da87b45af19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc390847b4c7da8742d5da3342f858a" id="r_aecc390847b4c7da8742d5da3342f858a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecc390847b4c7da8742d5da3342f858a">hdf_write_xdr_cdf</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> **)</td></tr>
+<tr class="separator:aecc390847b4c7da8742d5da3342f858a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6099c569367bdfc08389c19754a1db74" id="r_a6099c569367bdfc08389c19754a1db74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6099c569367bdfc08389c19754a1db74">hdf_conv_scales</a> (<a class="el" href="struct_n_c.html">NC</a> **)</td></tr>
+<tr class="separator:a6099c569367bdfc08389c19754a1db74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae068812077df958de26c1ff233ef5c2d" id="r_ae068812077df958de26c1ff233ef5c2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae068812077df958de26c1ff233ef5c2d">hdf_read_dims</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> *, <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a>)</td></tr>
+<tr class="separator:ae068812077df958de26c1ff233ef5c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d3436cee856d73a6f75640c086b4a6e" id="r_a2d3436cee856d73a6f75640c086b4a6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="struct_n_c__array.html">NC_array</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d3436cee856d73a6f75640c086b4a6e">hdf_read_attrs</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> *, <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a>)</td></tr>
+<tr class="separator:a2d3436cee856d73a6f75640c086b4a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ec34ce7bbde8f0140de3512c38e5bb" id="r_a53ec34ce7bbde8f0140de3512c38e5bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53ec34ce7bbde8f0140de3512c38e5bb">hdf_read_vars</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> *, <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a>)</td></tr>
+<tr class="separator:a53ec34ce7bbde8f0140de3512c38e5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2506b8eccfdfbafe195f40d8ed558f59" id="r_a2506b8eccfdfbafe195f40d8ed558f59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2506b8eccfdfbafe195f40d8ed558f59">hdf_read_xdr_cdf</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> **)</td></tr>
+<tr class="separator:a2506b8eccfdfbafe195f40d8ed558f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ba60f3efba4a261b7af5a0a7b2165c" id="r_a24ba60f3efba4a261b7af5a0a7b2165c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24ba60f3efba4a261b7af5a0a7b2165c">hdf_xdr_cdf</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> **)</td></tr>
+<tr class="separator:a24ba60f3efba4a261b7af5a0a7b2165c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a785813453f8f06caf8676b1aea507" id="r_a96a785813453f8f06caf8676b1aea507"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96a785813453f8f06caf8676b1aea507">hdf_vg_clobber</a> (<a class="el" href="struct_n_c.html">NC</a> *, int)</td></tr>
+<tr class="separator:a96a785813453f8f06caf8676b1aea507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e8fd3a30172163a15dc4e3faac0a487" id="r_a0e8fd3a30172163a15dc4e3faac0a487"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e8fd3a30172163a15dc4e3faac0a487">hdf_cdf_clobber</a> (<a class="el" href="struct_n_c.html">NC</a> *)</td></tr>
+<tr class="separator:a0e8fd3a30172163a15dc4e3faac0a487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4080c7815ae7d8c515b5edf3fc2a0cf3" id="r_a4080c7815ae7d8c515b5edf3fc2a0cf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4080c7815ae7d8c515b5edf3fc2a0cf3">hdf_close</a> (<a class="el" href="struct_n_c.html">NC</a> *)</td></tr>
+<tr class="separator:a4080c7815ae7d8c515b5edf3fc2a0cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ca8c6e72326cd89a0c102b48c9027d" id="r_a22ca8c6e72326cd89a0c102b48c9027d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22ca8c6e72326cd89a0c102b48c9027d">hdf_read_sds_dims</a> (<a class="el" href="struct_n_c.html">NC</a> *)</td></tr>
+<tr class="separator:a22ca8c6e72326cd89a0c102b48c9027d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b263e919946f77802f81e6ff6ba9708" id="r_a4b263e919946f77802f81e6ff6ba9708"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b263e919946f77802f81e6ff6ba9708">hdf_read_sds_cdf</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *, <a class="el" href="struct_n_c.html">NC</a> **)</td></tr>
+<tr class="separator:a4b263e919946f77802f81e6ff6ba9708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1941d0a3acc7531c478a3944bdba393" id="r_ac1941d0a3acc7531c478a3944bdba393"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1941d0a3acc7531c478a3944bdba393">SDPfreebuf</a> (void)</td></tr>
+<tr class="separator:ac1941d0a3acc7531c478a3944bdba393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb66fa2fb26f44e5c262b04939e48e3f" id="r_aeb66fa2fb26f44e5c262b04939e48e3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb66fa2fb26f44e5c262b04939e48e3f">NCgenio</a> (<a class="el" href="struct_n_c.html">NC</a> *handle, int varid, const long *<a class="el" href="hproto__fortran_8h.html#a75888c8279a6aed7c8297b7ee51e0d10">start</a>, const long *<a class="el" href="hproto__fortran_8h.html#acd653e7ceb20ec412ec9ba9c46ad3c69">count</a>, const long *<a class="el" href="hproto__fortran_8h.html#ab5c6f1457a3aa0d77ec86d3c45e5b0a7">stride</a>, const long *imap, void *<a class="el" href="hproto__fortran_8h.html#aa213837add851f30918771e166dc194a">values</a>)</td></tr>
+<tr class="separator:aeb66fa2fb26f44e5c262b04939e48e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80ba24615c2457f9f449060bdff08cf" id="r_aa80ba24615c2457f9f449060bdff08cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa80ba24615c2457f9f449060bdff08cf">NC_var_shape</a> (<a class="el" href="struct_n_c__var.html">NC_var</a> *var, <a class="el" href="struct_n_c__array.html">NC_array</a> *<a class="el" href="structdims.html">dims</a>)</td></tr>
+<tr class="separator:aa80ba24615c2457f9f449060bdff08cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc5e6ac034fdba2fc81874716e35d64" id="r_a6dc5e6ac034fdba2fc81874716e35d64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dc5e6ac034fdba2fc81874716e35d64">NC_reset_maxopenfiles</a> (<a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> req_max)</td></tr>
+<tr class="separator:a6dc5e6ac034fdba2fc81874716e35d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad634fef8900e2582332c60fcf8548e67" id="r_ad634fef8900e2582332c60fcf8548e67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad634fef8900e2582332c60fcf8548e67">NC_get_maxopenfiles</a> (void)</td></tr>
+<tr class="separator:ad634fef8900e2582332c60fcf8548e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a143f347d12ae04ee554a590db5cdc0" id="r_a2a143f347d12ae04ee554a590db5cdc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a143f347d12ae04ee554a590db5cdc0">NC_get_systemlimit</a> (void)</td></tr>
+<tr class="separator:a2a143f347d12ae04ee554a590db5cdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12fa8e26c76250972fed2d5bd53533b2" id="r_a12fa8e26c76250972fed2d5bd53533b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12fa8e26c76250972fed2d5bd53533b2">NC_get_numopencdfs</a> (void)</td></tr>
+<tr class="separator:a12fa8e26c76250972fed2d5bd53533b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf83675ac18c9931def3b51860409187" id="r_abf83675ac18c9931def3b51860409187"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> nc_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf83675ac18c9931def3b51860409187">cdf_unmap_type</a> (int <a class="el" href="hproto__fortran_8h.html#a67eb17a567a8fa132650fcee33ca50e9">type</a>)</td></tr>
+<tr class="separator:abf83675ac18c9931def3b51860409187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a350467ec653658b13e80c9920630737b" id="r_a350467ec653658b13e80c9920630737b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="types_8h.html#a7556af1cb61728b53228fa3af1c851de">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a350467ec653658b13e80c9920630737b">nssdc_read_cdf</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *xdrs, <a class="el" href="struct_n_c.html">NC</a> **handlep)</td></tr>
+<tr class="separator:a350467ec653658b13e80c9920630737b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80be7f0a606367f3102f261a7752cea3" id="r_a80be7f0a606367f3102f261a7752cea3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="types_8h.html#a7556af1cb61728b53228fa3af1c851de">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80be7f0a606367f3102f261a7752cea3">nssdc_write_cdf</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *xdrs, <a class="el" href="struct_n_c.html">NC</a> **handlep)</td></tr>
+<tr class="separator:a80be7f0a606367f3102f261a7752cea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53584d76009f4d1d72f80811dd2586e7" id="r_a53584d76009f4d1d72f80811dd2586e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="types_8h.html#a7556af1cb61728b53228fa3af1c851de">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53584d76009f4d1d72f80811dd2586e7">nssdc_xdr_cdf</a> (<a class="el" href="struct_x_d_r.html">XDR</a> *xdrs, <a class="el" href="struct_n_c.html">NC</a> **handlep)</td></tr>
+<tr class="separator:a53584d76009f4d1d72f80811dd2586e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca212529f83d71a384b449b34b55317e" id="r_aca212529f83d71a384b449b34b55317e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca212529f83d71a384b449b34b55317e">HDiscdf</a> (const char *<a class="el" href="hproto__fortran_8h.html#a19f25aa8c2e1e4e0e813ffe9d2a71bcc">filename</a>)</td></tr>
+<tr class="separator:aca212529f83d71a384b449b34b55317e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af20e8c28085b0eda02c200175b567122" id="r_af20e8c28085b0eda02c200175b567122"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af20e8c28085b0eda02c200175b567122">HDisnetcdf</a> (const char *<a class="el" href="hproto__fortran_8h.html#a19f25aa8c2e1e4e0e813ffe9d2a71bcc">filename</a>)</td></tr>
+<tr class="separator:af20e8c28085b0eda02c200175b567122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5048b9a151efb0e5b91c99313a1e37" id="r_a2a5048b9a151efb0e5b91c99313a1e37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a5048b9a151efb0e5b91c99313a1e37">HDisnetcdf64</a> (const char *<a class="el" href="hproto__fortran_8h.html#a19f25aa8c2e1e4e0e813ffe9d2a71bcc">filename</a>)</td></tr>
+<tr class="separator:a2a5048b9a151efb0e5b91c99313a1e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -490,6 +594,62 @@ Variables</h2></td></tr>
 <tr class="separator:a01020632adae67be0bc9da7098fcdb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a868be2e049f7de83563898de52729dbf" name="a868be2e049f7de83563898de52729dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868be2e049f7de83563898de52729dbf">&#9670;&#160;</a></span>ATTR_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ATTR_TAG&#160;&#160;&#160;<a class="el" href="htags_8h.html#a4016ad72f5269a8867e20f229ec7082f">DFTAG_VH</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b7771bbb0e029e9200b3a7ec9816204" name="a8b7771bbb0e029e9200b3a7ec9816204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7771bbb0e029e9200b3a7ec9816204">&#9670;&#160;</a></span>BLOCK_COUNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BLOCK_COUNT&#160;&#160;&#160;128   /* <a class="el" href="hproto__fortran_8h.html#a0063d28fb02fdef07a24ae30b790cf57">size</a> of linked block pointer objects  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3fab59482bedfb1cc6ac277f67f30bf" name="ac3fab59482bedfb1cc6ac277f67f30bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3fab59482bedfb1cc6ac277f67f30bf">&#9670;&#160;</a></span>BLOCK_MULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BLOCK_MULT&#160;&#160;&#160;64    /* multiplier for bytes in linked blocks */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c58c89fb46a46a5359c3c3d1a7c0106" name="a6c58c89fb46a46a5359c3c3d1a7c0106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c58c89fb46a46a5359c3c3d1a7c0106">&#9670;&#160;</a></span>BOGUS_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOGUS_TAG&#160;&#160;&#160;((<a class="el" href="hdfi_8h.html#ac2a9e79eb120216f855626495b7bd18a">uint16</a>)721)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7fae8f503cb6b148d3f4e0242f3f7762" name="a7fae8f503cb6b148d3f4e0242f3f7762"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7fae8f503cb6b148d3f4e0242f3f7762">&#9670;&#160;</a></span>CDF_FILE</h2>
 
@@ -512,6 +672,62 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define CDFMAGIC&#160;&#160;&#160;0x0000FFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25dc0c17d18ea4c67725c7aebb4b8393" name="a25dc0c17d18ea4c67725c7aebb4b8393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25dc0c17d18ea4c67725c7aebb4b8393">&#9670;&#160;</a></span>DATA_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DATA_TAG&#160;&#160;&#160;<a class="el" href="htags_8h.html#aa233a4870d44174c0786b059edc2a1c1">DFTAG_SD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a450fdd1303a94cf5df506f44df8e9286" name="a450fdd1303a94cf5df506f44df8e9286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a450fdd1303a94cf5df506f44df8e9286">&#9670;&#160;</a></span>DIM_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIM_TAG&#160;&#160;&#160;<a class="el" href="htags_8h.html#a05aa3227bc4993e88b71b83176d9c93d">DFTAG_VG</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21154d2e26d96e16f0788a32cb8581a5" name="a21154d2e26d96e16f0788a32cb8581a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21154d2e26d96e16f0788a32cb8581a5">&#9670;&#160;</a></span>DIMVAL_VERSION00</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIMVAL_VERSION00&#160;&#160;&#160;0     /* &lt;<a class="el" href="hproto__fortran_8h.html#a52c295cb9c7b39aab45b2c17e5c5516d">dimsize</a>&gt; fake <a class="el" href="hproto__fortran_8h.html#aa213837add851f30918771e166dc194a">values</a> */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00fa0df91903a4adc899bd33fcec7c98" name="a00fa0df91903a4adc899bd33fcec7c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00fa0df91903a4adc899bd33fcec7c98">&#9670;&#160;</a></span>DIMVAL_VERSION01</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIMVAL_VERSION01&#160;&#160;&#160;1     /* 1 elt with value of &lt;<a class="el" href="hproto__fortran_8h.html#a52c295cb9c7b39aab45b2c17e5c5516d">dimsize</a>&gt;  */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -591,6 +807,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aa8bad2cd89820cdaf2a7f26392774014" name="aa8bad2cd89820cdaf2a7f26392774014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8bad2cd89820cdaf2a7f26392774014">&#9670;&#160;</a></span>MAX_BLOCK_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_BLOCK_SIZE&#160;&#160;&#160;65536 /* maximum <a class="el" href="hproto__fortran_8h.html#a0063d28fb02fdef07a24ae30b790cf57">size</a> of block in linked blocks */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a34e253e64f5ae4da5f81b1fe1f0925cf" name="a34e253e64f5ae4da5f81b1fe1f0925cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34e253e64f5ae4da5f81b1fe1f0925cf">&#9670;&#160;</a></span>MAX_VXR_ENTRIES</h2>
 
@@ -655,6 +885,27 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define NC_check_id&#160;&#160;&#160;<a class="el" href="hdf2netcdf_8h.html#a63f39b9a3e188f122ba2a08ebcb18798">HNAME</a>(NC_check_id)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae623d071cbe5f3f0158ca810cb1569ec" name="ae623d071cbe5f3f0158ca810cb1569ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae623d071cbe5f3f0158ca810cb1569ec">&#9670;&#160;</a></span>NC_compare_string</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NC_compare_string</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">s1, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">s2</span>&#160;)&#160;&#160;&#160;((s1)-&gt;hash != (s2)-&gt;hash ? 1 : strcmp((s1)-&gt;<a class="el" href="hproto__fortran_8h.html#aa213837add851f30918771e166dc194a">values</a>, (s2)-&gt;<a class="el" href="hproto__fortran_8h.html#aa213837add851f30918771e166dc194a">values</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1949,6 +2200,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ab4b32f2d5a97f3c2519bf6ec4b913668" name="ab4b32f2d5a97f3c2519bf6ec4b913668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b32f2d5a97f3c2519bf6ec4b913668">&#9670;&#160;</a></span>VAR_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VAR_TAG&#160;&#160;&#160;<a class="el" href="htags_8h.html#a05aa3227bc4993e88b71b83176d9c93d">DFTAG_VG</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac8e85294f3b3a58270e6214d4e28ef90" name="ac8e85294f3b3a58270e6214d4e28ef90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac8e85294f3b3a58270e6214d4e28ef90">&#9670;&#160;</a></span>Void</h2>
 
@@ -2118,6 +2383,614 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="abf83675ac18c9931def3b51860409187" name="abf83675ac18c9931def3b51860409187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf83675ac18c9931def3b51860409187">&#9670;&#160;</a></span>cdf_unmap_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> nc_type cdf_unmap_type </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e8fd3a30172163a15dc4e3faac0a487" name="a0e8fd3a30172163a15dc4e3faac0a487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e8fd3a30172163a15dc4e3faac0a487">&#9670;&#160;</a></span>hdf_cdf_clobber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_cdf_clobber </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4080c7815ae7d8c515b5edf3fc2a0cf3" name="a4080c7815ae7d8c515b5edf3fc2a0cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4080c7815ae7d8c515b5edf3fc2a0cf3">&#9670;&#160;</a></span>hdf_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6099c569367bdfc08389c19754a1db74" name="a6099c569367bdfc08389c19754a1db74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6099c569367bdfc08389c19754a1db74">&#9670;&#160;</a></span>hdf_conv_scales()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_conv_scales </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> **</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7302fbbee52ccffe27b63f87184d4b7e" name="a7302fbbee52ccffe27b63f87184d4b7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7302fbbee52ccffe27b63f87184d4b7e">&#9670;&#160;</a></span>hdf_create_compat_dim_vdata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_create_compat_dim_vdata </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname"><em>xdrs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname"><em>handle</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c__dim.html">NC_dim</a> *</td>          <td class="paramname"><span class="paramname"><em>dim</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a></td>          <td class="paramname"><span class="paramname"><em>dimval_ver</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6491e94f3f289bff7b67e2c276b7c33" name="ab6491e94f3f289bff7b67e2c276b7c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6491e94f3f289bff7b67e2c276b7c33">&#9670;&#160;</a></span>hdf_create_dim_vdata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_create_dim_vdata </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c__dim.html">NC_dim</a> *</td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f17c099366c82688cad8f78f8d4b65d" name="a7f17c099366c82688cad8f78f8d4b65d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f17c099366c82688cad8f78f8d4b65d">&#9670;&#160;</a></span>hdf_fill_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_fill_array </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>storage</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a></td>          <td class="paramname"><span class="paramname"><em>len</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>value</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51a0f3b040e86e23da9fd92be361107d" name="a51a0f3b040e86e23da9fd92be361107d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a0f3b040e86e23da9fd92be361107d">&#9670;&#160;</a></span>hdf_get_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_get_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname"><em>handle</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c__var.html">NC_var</a> *</td>          <td class="paramname"><span class="paramname"><em>vp</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b1ad44e13d7718c3bbd609aa602950d" name="a8b1ad44e13d7718c3bbd609aa602950d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b1ad44e13d7718c3bbd609aa602950d">&#9670;&#160;</a></span>hdf_get_ref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_get_ref </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8b30a4725d975b6d308e5ad80ac900a" name="aa8b30a4725d975b6d308e5ad80ac900a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8b30a4725d975b6d308e5ad80ac900a">&#9670;&#160;</a></span>hdf_get_vp_aid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> hdf_get_vp_aid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname"><em>handle</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c__var.html">NC_var</a> *</td>          <td class="paramname"><span class="paramname"><em>vp</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74ad042135ddfd9362d131d08a01fa7b" name="a74ad042135ddfd9362d131d08a01fa7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ad042135ddfd9362d131d08a01fa7b">&#9670;&#160;</a></span>hdf_map_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> int hdf_map_type </td>
+          <td>(</td>
+          <td class="paramtype">nc_type</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d3436cee856d73a6f75640c086b4a6e" name="a2d3436cee856d73a6f75640c086b4a6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d3436cee856d73a6f75640c086b4a6e">&#9670;&#160;</a></span>hdf_read_attrs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="struct_n_c__array.html">NC_array</a> * hdf_read_attrs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a></td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae068812077df958de26c1ff233ef5c2d" name="ae068812077df958de26c1ff233ef5c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae068812077df958de26c1ff233ef5c2d">&#9670;&#160;</a></span>hdf_read_dims()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_read_dims </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a></td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b263e919946f77802f81e6ff6ba9708" name="a4b263e919946f77802f81e6ff6ba9708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b263e919946f77802f81e6ff6ba9708">&#9670;&#160;</a></span>hdf_read_sds_cdf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_read_sds_cdf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> **</td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22ca8c6e72326cd89a0c102b48c9027d" name="a22ca8c6e72326cd89a0c102b48c9027d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ca8c6e72326cd89a0c102b48c9027d">&#9670;&#160;</a></span>hdf_read_sds_dims()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_read_sds_dims </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53ec34ce7bbde8f0140de3512c38e5bb" name="a53ec34ce7bbde8f0140de3512c38e5bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53ec34ce7bbde8f0140de3512c38e5bb">&#9670;&#160;</a></span>hdf_read_vars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_read_vars </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a></td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2506b8eccfdfbafe195f40d8ed558f59" name="a2506b8eccfdfbafe195f40d8ed558f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2506b8eccfdfbafe195f40d8ed558f59">&#9670;&#160;</a></span>hdf_read_xdr_cdf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_read_xdr_cdf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> **</td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46cf377e1e577dd1a09da56b43b166f5" name="a46cf377e1e577dd1a09da56b43b166f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46cf377e1e577dd1a09da56b43b166f5">&#9670;&#160;</a></span>hdf_unmap_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> nc_type hdf_unmap_type </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96a785813453f8f06caf8676b1aea507" name="a96a785813453f8f06caf8676b1aea507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a785813453f8f06caf8676b1aea507">&#9670;&#160;</a></span>hdf_vg_clobber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_vg_clobber </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70ed68d7ae6b5ee0aa8e118814691896" name="a70ed68d7ae6b5ee0aa8e118814691896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70ed68d7ae6b5ee0aa8e118814691896">&#9670;&#160;</a></span>hdf_write_attr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_write_attr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c__attr.html">NC_attr</a> **</td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbe244e11c087d5b0f975bf893c32842" name="acbe244e11c087d5b0f975bf893c32842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe244e11c087d5b0f975bf893c32842">&#9670;&#160;</a></span>hdf_write_dim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> hdf_write_dim </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c__dim.html">NC_dim</a> **</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a></td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a995630b6bfb876b486c6da87b45af19a" name="a995630b6bfb876b486c6da87b45af19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a995630b6bfb876b486c6da87b45af19a">&#9670;&#160;</a></span>hdf_write_var()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> hdf_write_var </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c__var.html">NC_var</a> **</td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecc390847b4c7da8742d5da3342f858a" name="aecc390847b4c7da8742d5da3342f858a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc390847b4c7da8742d5da3342f858a">&#9670;&#160;</a></span>hdf_write_xdr_cdf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_write_xdr_cdf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> **</td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24ba60f3efba4a261b7af5a0a7b2165c" name="a24ba60f3efba4a261b7af5a0a7b2165c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24ba60f3efba4a261b7af5a0a7b2165c">&#9670;&#160;</a></span>hdf_xdr_cdf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> hdf_xdr_cdf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname">, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> **</td>          <td class="paramname"><span class="paramname"></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56d48c51d7d2864722b7f2219b8d117c" name="a56d48c51d7d2864722b7f2219b8d117c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d48c51d7d2864722b7f2219b8d117c">&#9670;&#160;</a></span>hdf_xdrfile_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> void hdf_xdrfile_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname"><em>xdrs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ncop</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca212529f83d71a384b449b34b55317e" name="aca212529f83d71a384b449b34b55317e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca212529f83d71a384b449b34b55317e">&#9670;&#160;</a></span>HDiscdf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> HDiscdf </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af20e8c28085b0eda02c200175b567122" name="af20e8c28085b0eda02c200175b567122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af20e8c28085b0eda02c200175b567122">&#9670;&#160;</a></span>HDisnetcdf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> HDisnetcdf </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a5048b9a151efb0e5b91c99313a1e37" name="a2a5048b9a151efb0e5b91c99313a1e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5048b9a151efb0e5b91c99313a1e37">&#9670;&#160;</a></span>HDisnetcdf64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> HDisnetcdf64 </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad028bcf4386308282220d997eda46bc7" name="ad028bcf4386308282220d997eda46bc7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad028bcf4386308282220d997eda46bc7">&#9670;&#160;</a></span>NC_arrayfill()</h2>
 
@@ -2405,6 +3278,57 @@ Variables</h2></td></tr>
           <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> int <a class="el" href="hdf2netcdf_8h.html#a63f39b9a3e188f122ba2a08ebcb18798">HNAME</a> NC_free_var </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_n_c__var.html">NC_var</a> *</td>          <td class="paramname"><span class="paramname"><em>var</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad634fef8900e2582332c60fcf8548e67" name="ad634fef8900e2582332c60fcf8548e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad634fef8900e2582332c60fcf8548e67">&#9670;&#160;</a></span>NC_get_maxopenfiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> NC_get_maxopenfiles </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12fa8e26c76250972fed2d5bd53533b2" name="a12fa8e26c76250972fed2d5bd53533b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12fa8e26c76250972fed2d5bd53533b2">&#9670;&#160;</a></span>NC_get_numopencdfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> int NC_get_numopencdfs </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a143f347d12ae04ee554a590db5cdc0" name="a2a143f347d12ae04ee554a590db5cdc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a143f347d12ae04ee554a590db5cdc0">&#9670;&#160;</a></span>NC_get_systemlimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> NC_get_systemlimit </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2704,6 +3628,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a6dc5e6ac034fdba2fc81874716e35d64" name="a6dc5e6ac034fdba2fc81874716e35d64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc5e6ac034fdba2fc81874716e35d64">&#9670;&#160;</a></span>NC_reset_maxopenfiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> NC_reset_maxopenfiles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a></td>          <td class="paramname"><span class="paramname"><em>req_max</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="afe4bfe8332d19e609483d2b068668de1" name="afe4bfe8332d19e609483d2b068668de1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe4bfe8332d19e609483d2b068668de1">&#9670;&#160;</a></span>nc_serror()</h2>
 
@@ -2736,6 +3677,27 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">nc_type</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa80ba24615c2457f9f449060bdff08cf" name="aa80ba24615c2457f9f449060bdff08cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa80ba24615c2457f9f449060bdff08cf">&#9670;&#160;</a></span>NC_var_shape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> NC_var_shape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_n_c__var.html">NC_var</a> *</td>          <td class="paramname"><span class="paramname"><em>var</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c__array.html">NC_array</a> *</td>          <td class="paramname"><span class="paramname"><em>dims</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2947,6 +3909,52 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aeb66fa2fb26f44e5c262b04939e48e3f" name="aeb66fa2fb26f44e5c262b04939e48e3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb66fa2fb26f44e5c262b04939e48e3f">&#9670;&#160;</a></span>NCgenio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> NCgenio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> *</td>          <td class="paramname"><span class="paramname"><em>handle</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>varid</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long *</td>          <td class="paramname"><span class="paramname"><em>start</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long *</td>          <td class="paramname"><span class="paramname"><em>count</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long *</td>          <td class="paramname"><span class="paramname"><em>stride</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long *</td>          <td class="paramname"><span class="paramname"><em>imap</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>values</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aeb28d97cbb63dfe2adb165b5ecc14a7f" name="aeb28d97cbb63dfe2adb165b5ecc14a7f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb28d97cbb63dfe2adb165b5ecc14a7f">&#9670;&#160;</a></span>NCmemset()</h2>
 
@@ -3045,6 +4053,86 @@ Variables</h2></td></tr>
           <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> int <a class="el" href="hdf2netcdf_8h.html#a63f39b9a3e188f122ba2a08ebcb18798">HNAME</a> NCxdrfile_sync </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname"><em>xdrs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a350467ec653658b13e80c9920630737b" name="a350467ec653658b13e80c9920630737b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350467ec653658b13e80c9920630737b">&#9670;&#160;</a></span>nssdc_read_cdf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="types_8h.html#a7556af1cb61728b53228fa3af1c851de">bool_t</a> nssdc_read_cdf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname"><em>xdrs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> **</td>          <td class="paramname"><span class="paramname"><em>handlep</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80be7f0a606367f3102f261a7752cea3" name="a80be7f0a606367f3102f261a7752cea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80be7f0a606367f3102f261a7752cea3">&#9670;&#160;</a></span>nssdc_write_cdf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="types_8h.html#a7556af1cb61728b53228fa3af1c851de">bool_t</a> nssdc_write_cdf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname"><em>xdrs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> **</td>          <td class="paramname"><span class="paramname"><em>handlep</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53584d76009f4d1d72f80811dd2586e7" name="a53584d76009f4d1d72f80811dd2586e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53584d76009f4d1d72f80811dd2586e7">&#9670;&#160;</a></span>nssdc_xdr_cdf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="types_8h.html#a7556af1cb61728b53228fa3af1c851de">bool_t</a> nssdc_xdr_cdf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_x_d_r.html">XDR</a> *</td>          <td class="paramname"><span class="paramname"><em>xdrs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_n_c.html">NC</a> **</td>          <td class="paramname"><span class="paramname"><em>handlep</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1941d0a3acc7531c478a3944bdba393" name="ac1941d0a3acc7531c478a3944bdba393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1941d0a3acc7531c478a3944bdba393">&#9670;&#160;</a></span>SDPfreebuf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h4api__adpt_8h.html#a9b533dd56d2da624a301c93392980086">HDFLIBAPI</a> <a class="el" href="hdfi_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> SDPfreebuf </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
