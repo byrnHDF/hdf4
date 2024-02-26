@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="HDFG-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname"><a href="https://www.hdfgroup.org">HDF</a>
-   &#160;<span id="projectnumber">4.3.0-c59fdea</span>
+   &#160;<span id="projectnumber">4.3.0-c59b00e</span>
    </div>
    <div id="projectbrief">API Reference</div>
   </td>
@@ -110,7 +110,9 @@ $(function(){initNavTree('hdftest_8h.html',''); initResizable(); });
   <div class="headertitle"><div class="title">hdftest.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;float.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -134,6 +136,12 @@ Macros</h2></td></tr>
 <tr class="separator:a24991242b8731799f6db0b8f492c74af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6484c6ac3c314d53821bdfa81981812c" id="r_a6484c6ac3c314d53821bdfa81981812c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6484c6ac3c314d53821bdfa81981812c">CHECK_ALLOC</a>(<a class="el" href="hproto__fortran_8h.html#a73d29f95cc1f772c77b9d7a41678fa60">buffer</a>,  buf_name,  func_name)</td></tr>
 <tr class="separator:a6484c6ac3c314d53821bdfa81981812c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48acb888300e9db94083b860e10447c" id="r_aa48acb888300e9db94083b860e10447c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa48acb888300e9db94083b860e10447c">H4_FLT_ABS_EQUAL</a>(X,  Y)&#160;&#160;&#160;(fabsf((X) - (Y)) &lt; FLT_EPSILON)</td></tr>
+<tr class="separator:aa48acb888300e9db94083b860e10447c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae73f3763c0b2c70a94d3e011d15e219" id="r_aae73f3763c0b2c70a94d3e011d15e219"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae73f3763c0b2c70a94d3e011d15e219">H4_DBL_ABS_EQUAL</a>(X,  Y)&#160;&#160;&#160;(fabs((X) - (Y)) &lt; DBL_EPSILON)</td></tr>
+<tr class="separator:aae73f3763c0b2c70a94d3e011d15e219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ac99895aa1161b0a9016398d18d6ec" id="r_a01ac99895aa1161b0a9016398d18d6ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01ac99895aa1161b0a9016398d18d6ec">H4_LDBL_ABS_EQUAL</a>(X,  Y)&#160;&#160;&#160;(fabsl((X) - (Y)) &lt; LDBL_EPSILON)</td></tr>
+<tr class="separator:a01ac99895aa1161b0a9016398d18d6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -151,8 +159,8 @@ Functions</h2></td></tr>
 <tr class="separator:a21bc0315913079c526229e5e78077c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a388d98f55d98fd15ae66d601dc1cd202" id="r_a388d98f55d98fd15ae66d601dc1cd202"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a388d98f55d98fd15ae66d601dc1cd202">append_Data2SDS</a> (<a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> sd_id, char *sds_name, <a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> *<a class="el" href="hproto__fortran_8h.html#a9b5a1e76b086e1f02f877026d9ae40a4">start</a>, <a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> *edges, void *ap_data)</td></tr>
 <tr class="separator:a388d98f55d98fd15ae66d601dc1cd202"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38fb2c460447f22730f77d835f100cb3" id="r_a38fb2c460447f22730f77d835f100cb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38fb2c460447f22730f77d835f100cb3">verify_datasize</a> (<a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> sds_id, <a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> data_size, char *sds_name)</td></tr>
-<tr class="separator:a38fb2c460447f22730f77d835f100cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955cb8c725e56c60d81821499cf22761" id="r_a955cb8c725e56c60d81821499cf22761"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hdf_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a955cb8c725e56c60d81821499cf22761">verify_datasize</a> (<a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> sds_id, <a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> data_size, char *sds_name)</td></tr>
+<tr class="separator:a955cb8c725e56c60d81821499cf22761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1847d7673525d96fedf9d5260f90bf22" id="r_a1847d7673525d96fedf9d5260f90bf22"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1847d7673525d96fedf9d5260f90bf22">verify_info_data</a> (<a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> sds_id, <a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> expected_dimsize, <a class="el" href="hdf_8h.html#aa0d0fdc87fd135ef2bedb030901cdb9c">int16</a> *result)</td></tr>
 <tr class="separator:a1847d7673525d96fedf9d5260f90bf22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f2da95646f43da7fa2fa893f731144f" id="r_a3f2da95646f43da7fa2fa893f731144f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f2da95646f43da7fa2fa893f731144f">get_SDSbyName</a> (<a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a> sd_id, const char *sds_name)</td></tr>
@@ -265,6 +273,27 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="aae73f3763c0b2c70a94d3e011d15e219" name="aae73f3763c0b2c70a94d3e011d15e219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae73f3763c0b2c70a94d3e011d15e219">&#9670;&#160;</a></span>H4_DBL_ABS_EQUAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define H4_DBL_ABS_EQUAL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">X, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">Y</span>&#160;)&#160;&#160;&#160;(fabs((X) - (Y)) &lt; DBL_EPSILON)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac07a3f204462499d3f099e810888dc3b" name="ac07a3f204462499d3f099e810888dc3b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac07a3f204462499d3f099e810888dc3b">&#9670;&#160;</a></span>H4_FAILED</h2>
 
@@ -279,11 +308,53 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    {                                                                                                        \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                                                                                                     \</div>
 <div class="line">        puts(<span class="stringliteral">&quot;*FAILED*&quot;</span>);                                                                                    \</div>
 <div class="line">        fflush(stdout);                                                                                      \</div>
-<div class="line">    }</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="aa48acb888300e9db94083b860e10447c" name="aa48acb888300e9db94083b860e10447c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa48acb888300e9db94083b860e10447c">&#9670;&#160;</a></span>H4_FLT_ABS_EQUAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define H4_FLT_ABS_EQUAL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">X, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">Y</span>&#160;)&#160;&#160;&#160;(fabsf((X) - (Y)) &lt; FLT_EPSILON)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01ac99895aa1161b0a9016398d18d6ec" name="a01ac99895aa1161b0a9016398d18d6ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ac99895aa1161b0a9016398d18d6ec">&#9670;&#160;</a></span>H4_LDBL_ABS_EQUAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define H4_LDBL_ABS_EQUAL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">X, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">Y</span>&#160;)&#160;&#160;&#160;(fabsl((X) - (Y)) &lt; LDBL_EPSILON)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="a1d31f36672ae1653a65b520d0694c4e6" name="a1d31f36672ae1653a65b520d0694c4e6"></a>
@@ -321,10 +392,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    {                                                                                                        \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                                                                                                     \</div>
 <div class="line">        puts(<span class="stringliteral">&quot; PASSED&quot;</span>);                                                                                     \</div>
 <div class="line">        fflush(stdout);                                                                                      \</div>
-<div class="line">    }</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -687,14 +758,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a38fb2c460447f22730f77d835f100cb3" name="a38fb2c460447f22730f77d835f100cb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38fb2c460447f22730f77d835f100cb3">&#9670;&#160;</a></span>verify_datasize()</h2>
+<a id="a955cb8c725e56c60d81821499cf22761" name="a955cb8c725e56c60d81821499cf22761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955cb8c725e56c60d81821499cf22761">&#9670;&#160;</a></span>verify_datasize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void verify_datasize </td>
+          <td class="memname"><a class="el" href="hdf_8h.html#a03ba81f55b7c394eb8e1e5d1fcab1dfa">intn</a> verify_datasize </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="hdf_8h.html#ab7903878916593daecbeb95b98115ab0">int32</a></td>          <td class="paramname"><span class="paramname"><em>sds_id</em>, </span></td>
         </tr>
